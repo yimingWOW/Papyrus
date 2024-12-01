@@ -2,6 +2,7 @@
 
 A blockchain-based platform revolutionizing academic publishing by creating a transparent, immutable, and accessible research database.
 
+## 吐槽
 权威的学术出版机构为前沿学术观点提供了相对公正严谨的平台，在论文发表过程中提供了审稿流程和审稿人邀请机制，在一定程度上保证了学术成果的质量。
 但是这种出版模式也饱受诟病。一个非常令人愤慨的事实是，学术期刊两头通吃，既可以从作者那里收取高额的出版费用，又可以从读者那里收取高额的订阅费用。高昂的发表费用客观上抬高了学术成果的门槛，也限制了学术成果的传播。欠发达国家和地区的研究人员由于经济原因，无法订阅昂贵的学术期刊，客观上被排除在学术交流的主流之外。这是不争的事实。
 
@@ -9,6 +10,7 @@ A blockchain-based platform revolutionizing academic publishing by creating a tr
 
 看来，学术成果的影响力并不取决于它是否发表在权威期刊上，而是取决于它是否具有创新性和影响力。那我们为什么不能创建一个平台，让所有学术成果自由发布，让所有读者自由订阅，让所有学者自由交流呢？
 
+## 项目介绍
 本项目来源于[这个帖子](https://x.com/isyiming/status/1858533903000379740)
 我将其命名为Papyrus 莎草纸，我问了AI，他告诉我这是古埃及的书写材料，象征着知识的传承和学术的进步。
 
@@ -39,7 +41,7 @@ explorer服务
 你想不想在Papyrus上发表你的观点后，得到越来越多的人认同，你的观点最终成为大家口中的"Papyrus-xxx"呢？
 
 
-### 感兴趣的开发者，欢迎加入
+## 感兴趣的开发者，欢迎加入
 
 合约代码在：papyrus/programs/papyrus/src/instructions
 前端app代码在：papyrus/app/src
