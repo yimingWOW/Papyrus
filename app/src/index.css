@@ -1,0 +1,645 @@
+/* src/index.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #213547;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.create-platform-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 4px;
+  color: #dc2626;
+}
+
+.success-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ecfdf5;
+  border: 1px solid #10b981;
+  border-radius: 4px;
+  color: #059669;
+}
+
+.success-message h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.success-message a {
+  color: #059669;
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-description {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.submit-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.wallet-notice {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+  color: #b45309;
+  text-align: center;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #4f46e5;
+}
+
+.tab.active {
+  color: #4f46e5;
+  border-bottom: 2px solid #4f46e5;
+}
+
+.content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+.coming-soon h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+}
+
+/* List Styles */
+.list-container {
+  margin-bottom: 2rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.list-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+/* Platform List Styles */
+.platform-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.platform-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.platform-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.platform-details:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.platform-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.platform-value {
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.refresh-button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.refresh-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group p {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 2px dashed #e5e7eb;
+}
+
+.publication-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;  /* 确保卡片占满容器宽度 */
+}
+.publication-header {
+  margin-bottom: 16px;
+}
+
+.publication-type {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #495057;
+  margin-left: 12px;
+}
+
+.detail-row {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  display: inline-block;
+  font-weight: 600;
+  color: #666;
+  min-width: 100px;
+  margin-right: 8px;
+}
+
+.detail-value {
+  display: inline-block;
+  color: #333;
+  word-wrap: break-word;
+  max-width: calc(100% - 120px);
+}
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* 确保模态框中的表单样式正确 */
+.modal-content .review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-content .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-content input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-content .submit-button {
+  background: #0066cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content .submit-button:disabled {
+  background: #cccccc;
+}
+
+
+
+.publication-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+.publication-header {
+  margin-bottom: 16px;
+}
+
+.publication-type {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #495057;
+  margin-left: 12px;
+}
+
+.detail-row {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  display: inline-block;
+  font-weight: 600;
+  color: #666;
+  min-width: 100px;
+  margin-right: 8px;
+}
+
+.detail-value {
+  display: inline-block;
+  color: #333;
+  word-wrap: break-word;
+  max-width: calc(100% - 120px);
+}
+
+.content-link {
+  color: #0066cc;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.publication-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.view-content-button,
+
+
+.view-content-button {
+  background: #0066cc;
+  color: white;
+  text-decoration: none;
+}
+
+.details-button {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.view-content-button:hover {
+  background: #0052a3;
+}
+
+.details-button:hover {
+  background: #dee2e6;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.publication-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* 统一所有按钮的基础样式 */
+.publication-actions button,
+.publication-actions a {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* View Content 按钮样式 */
+.view-content-button {
+  background: #0066cc;
+  color: white;
+}
+
+.view-content-button:hover {
+  background: #0052a3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Details 按钮样式 */
+.details-button {
+  background: #6c757d;
+  color: white;
+}
+
+.details-button:hover {
+  background: #5a6268;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Write Review 按钮样式 */
+.review-button {
+  background: #28a745;
+  color: white;
+}
+
+.review-button:hover {
+  background: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 禁用状态的样式 */
+.publication-actions button:disabled,
+.publication-actions a:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
