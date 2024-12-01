@@ -52,6 +52,6 @@ Papyrus需要：
 - 熟悉react的前端开发者
 - 熟悉golang的后端开发者
 
-目前的[效果](https://github.com/yimingWOW/Papyrus/blob/main/image/publications.png)
+目前的![效果](https://github.com/yimingWOW/Papyrus/blob/main/image/publications.png)
 
 
